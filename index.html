@@ -36,33 +36,24 @@
 
   <p id="quote" class="text-2xl italic font-semibold max-w-3xl mx-auto min-h-[48px]"></p>
 
-  <h3 class="text-lg mt-10">
-    ⏳ المدة المتبقية على نهاية الحملة:
-  </h3>
-
-  <div id="countdown"
-       class="mt-4 text-2xl md:text-3xl font-bold text-yellow-300 tracking-wide">
-  </div>
+  <h3 class="text-lg mt-10">⏳ المدة المتبقية على نهاية الحملة:</h3>
+  <div id="countdown" class="mt-4 text-2xl md:text-3xl font-bold text-yellow-300"></div>
 </section>
 
 <!-- ================= STATS ================= -->
-<section id="stats" class="py-20 max-w-7xl mx-auto px-6">
-  <h3 class="text-3xl font-bold mb-12 text-center">📊 الوضعية الحالية</h3>
+<section id="stats" class="pt-20 pb-8 max-w-7xl mx-auto px-6">
+  <h3 class="text-3xl font-bold mb-10 text-center">📊 الوضعية الحالية</h3>
 
-  <div class="grid md:grid-cols-4 gap-8 text-center">
-
-    <div class="md:col-span-4 flex justify-center">
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition w-full md:w-1/4">
-        <p class="text-5xl font-extrabold text-green-700">58</p>
-        <p class="font-semibold mt-2">عدد المتبرعين</p>
-      </div>
+  <div class="flex justify-center">
+    <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition w-full md:w-1/4 text-center">
+      <p class="text-5xl font-extrabold text-green-700">58</p>
+      <p class="font-semibold mt-2">عدد المتبرعين</p>
     </div>
-
   </div>
 </section>
 
 <!-- ================= MATERIALS ================= -->
-<section id="materials" class="py-20 max-w-7xl mx-auto px-6">
+<section id="materials" class="pt-6 pb-20 max-w-7xl mx-auto px-6">
   <h3 class="text-3xl font-bold mb-12 text-center">🥫 المواد المتبرع بها</h3>
 
   <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto text-lg">
@@ -95,7 +86,7 @@
 
   </div>
 
-  <p class="text-center mt-10 text-sm text-gray-500">
+  <p class="text-center mt-8 text-sm text-gray-500">
     يمكنك المساهمة بما يتيسر لك من المواد السابقة.
   </p>
 </section>
@@ -123,10 +114,8 @@ const quotes = [
   "«قفة صغيرة، أثرها كبير»",
   "«في رمضان، التكافل عبادة»"
 ];
-
 let qi = 0;
 const quoteEl = document.getElementById("quote");
-
 function rotateQuote() {
   quoteEl.textContent = quotes[qi % quotes.length];
   qi++;
@@ -139,7 +128,6 @@ function updateCountdown() {
   const endDate = new Date("2026-02-09T23:59:59").getTime();
   const now = new Date().getTime();
   const diff = endDate - now;
-
   const el = document.getElementById("countdown");
 
   if (diff <= 0) {
@@ -154,7 +142,6 @@ function updateCountdown() {
 
   el.textContent = `${d} يوم · ${h} س · ${m} د · ${s} ث`;
 }
-
 updateCountdown();
 setInterval(updateCountdown, 1000);
 </script>

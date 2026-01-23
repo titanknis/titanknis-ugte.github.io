@@ -4,142 +4,160 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>حملة قفة رمضان | UGTE ISIMM</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="font-[Cairo] bg-gray-50 text-gray-800">
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="bg-green-700 text-white sticky top-0 z-50 shadow">
   <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
     <div class="flex items-center gap-3">
-      <img src="logo.webp" alt="شعار الاتحاد العام التونسي للطلبة" class="h-10 w-auto" />
+      <img src="logo.webp" alt="UGTE" class="h-10 w-auto">
       <h1 class="text-xl md:text-2xl font-bold">🌙 حملة قفة رمضان – UGTE ISIMM</h1>
     </div>
-    <nav class="hidden md:flex gap-6">
-      <a href="#stats">الوضعية</a>
-      <a href="#materials">المواد</a>   
-      <a href="#cont">تواصل معنا</a>
+    <nav class="hidden md:flex gap-6 font-semibold">
+      <a href="#stats" class="hover:underline">الوضعية</a>
+      <a href="#materials" class="hover:underline">المواد</a>
+      <a href="#contact" class="hover:underline">تواصل</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="bg-green-800 text-white text-center py-28 px-6">
+<!-- ================= HERO ================= -->
+<section class="bg-green-800 text-white text-center py-24 px-6">
   <h2 class="text-4xl md:text-5xl font-extrabold mb-6">معًا نُكمل 100 قفة 🤍</h2>
   <h3 class="text-xl mb-6">مبادرة طلابية تضامنية</h3>
-  
-  <!-- الاقتباس المتغير -->
-  <p id="quote" class="text-2xl italic font-semibold max-w-3xl mx-auto"></p>
-  
-  <h3 class="text-lg mt-10">⏳ المدة المتبقية على نهاية الحملة: <strong>12 يوم</strong></h3>
-</section>
 
-<!-- STATS -->
-<section id="stats" class="py-20 max-w-7xl mx-auto px-6">
-  <h3 class="text-3xl font-bold mb-12 text-center">📊 الوضعية الحالية</h3>
-  <div class="grid md:grid-cols-4 gap-8 text-center">
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <p class="text-4xl font-extrabold text-green-700">0</p>
-      <p>عدد المتبرعين</p>
-    </div>
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <p class="text-4xl font-extrabold text-green-700">0</p>
-      <p>قفف جاهزة</p>
-    </div>
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <p class="text-4xl font-extrabold text-green-700">100</p>
-      <p>الهدف</p>
-    </div>
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <p class="text-4xl font-extrabold text-red-600">100</p>
-      <p>قفف متبقية</p>
-    </div>
+  <p id="quote" class="text-2xl italic font-semibold max-w-3xl mx-auto min-h-[48px]"></p>
+
+  <h3 class="text-lg mt-10">
+    ⏳ المدة المتبقية على نهاية الحملة:
+  </h3>
+
+  <div id="countdown"
+       class="mt-4 text-2xl md:text-3xl font-bold text-yellow-300 tracking-wide">
   </div>
 </section>
 
-<!-- MATERIALS + SHORTAGE -->
+<!-- ================= STATS ================= -->
+<section id="stats" class="py-20 max-w-7xl mx-auto px-6">
+  <h3 class="text-3xl font-bold mb-12 text-center">📊 الوضعية الحالية</h3>
+
+  <div class="grid md:grid-cols-4 gap-8 text-center">
+
+    <div class="md:col-span-4 flex justify-center">
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition w-full md:w-1/4">
+        <p class="text-5xl font-extrabold text-green-700">58</p>
+        <p class="font-semibold mt-2">عدد المتبرعين</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= MATERIALS ================= -->
 <section id="materials" class="py-20 max-w-7xl mx-auto px-6">
-  <h3 class="text-3xl font-bold mb-12 text-center">🥫 المواد المتبرع بها </h3>
+  <h3 class="text-3xl font-bold mb-12 text-center">🥫 المواد المتبرع بها</h3>
 
   <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto text-lg">
 
-    <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center">
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
       <h4 class="font-bold text-xl mb-2">سميد</h4>
-      <p class="text-green-700 font-semibold text-lg">0 كغ</p>
-      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في سميد</p>
+      <p class="text-green-700 font-semibold">30 كغ</p>
+      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في السميد</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center">
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
       <h4 class="font-bold text-xl mb-2">زيت</h4>
-      <p class="text-green-700 font-semibold text-lg">0 لتر</p>
-      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في زيت</p>
-
+      <p class="text-green-700 font-semibold">20 لتر</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center">
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
       <h4 class="font-bold text-xl mb-2">سكر</h4>
-      <p class="text-green-700 font-semibold text-lg">0 كغ</p>
-      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في سكر</p>
-
+      <p class="text-green-700 font-semibold">25 كغ</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center">
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
       <h4 class="font-bold text-xl mb-2">عجائن</h4>
-      <p class="text-green-700 font-semibold text-lg">0 كغ</p>
-      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في العجائن</p>
-      
+      <p class="text-green-700 font-semibold">18 كغ</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center">
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
       <h4 class="font-bold text-xl mb-2">معلبات</h4>
-      <p class="text-green-700 font-semibold text-lg">0 وحدة</p>
-      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في المعلبات</p>
-
+      <p class="text-green-700 font-semibold">40 وحدة</p>
     </div>
 
   </div>
-  
-  <p class="text-center mt-10 text-sm text-gray-500">يمكنك المساهمة بما يتيسر لك من المواد السابقة.</p>
+
+  <p class="text-center mt-10 text-sm text-gray-500">
+    يمكنك المساهمة بما يتيسر لك من المواد السابقة.
+  </p>
 </section>
 
-<!-- CONTACT -->
-<section id="cont" class="bg-green-700 text-white py-20">
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="bg-green-700 text-white py-20">
   <div class="max-w-7xl mx-auto px-6 text-center">
     <h3 class="text-3xl font-bold mb-6">📞 تواصل معنا</h3>
-    <p class="text-xl mb-4">الهاتف / واتساب: <strong>28893766</strong></p>
-    <p class="text-xl">فيسبوك: <strong>UGTE ISIMM</strong></p><br>
-        <p class="text-xl">يمكنكم التبرع باستعمال تطبيق D17 بعد التواصل معنا</p>
+    <p class="text-xl mb-2">الهاتف / واتساب: <strong>28893766</strong></p>
+    <p class="text-xl mb-4">فيسبوك: <strong>UGTE ISIMM</strong></p>
+    <p class="text-lg">يمكنكم التبرع عبر تطبيق D17 بعد التواصل معنا</p>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer class="bg-gray-900 text-gray-300 py-6 text-center">
   <p>© 2026 حملة قفة رمضان – الاتحاد العام التونسي للطلبة | ISIMM</p>
 </footer>
 
+<!-- ================= SCRIPTS ================= -->
 <script>
+// اقتباسات
 const quotes = [
   "«وتعاونوا على البر والتقوى»",
   "«قفة صغيرة، أثرها كبير»",
   "«في رمضان، التكافل عبادة»"
 ];
 
-let i = 0;
-setInterval(() => {
-  document.getElementById("quote").innerText =
-    quotes[i++ % quotes.length];
-}, 3000);
+let qi = 0;
+const quoteEl = document.getElementById("quote");
 
-// تهيئة أول اقتباس عند تحميل الصفحة مباشرةً
-document.getElementById("quote").innerText = quotes[0];
+function rotateQuote() {
+  quoteEl.textContent = quotes[qi % quotes.length];
+  qi++;
+}
+rotateQuote();
+setInterval(rotateQuote, 3000);
+
+// العد التنازلي
+function updateCountdown() {
+  const endDate = new Date("2026-02-09T23:59:59").getTime();
+  const now = new Date().getTime();
+  const diff = endDate - now;
+
+  const el = document.getElementById("countdown");
+
+  if (diff <= 0) {
+    el.textContent = "انتهت الحملة 🤍";
+    return;
+  }
+
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / (1000 * 60)) % 60);
+  const s = Math.floor((diff / 1000) % 60);
+
+  el.textContent = `${d} يوم · ${h} س · ${m} د · ${s} ث`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
 </script>
 
 </body>
 </html>
-
-
-
-
-
-

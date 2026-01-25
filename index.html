@@ -25,12 +25,23 @@
       <a href="#stats">الوضعية</a>
       <a href="#materials">المواد</a>
       <a href="#donations">التبرعات المالية</a>
-      <a href="#contribute">كيف يمكن المشاركة معكم</a>
-
+      <a href="#contribute">كيف يمكنني المساهمة معكم</a>
       <a href="#contact">التواصل معنا</a>
     </nav>
   </div>
 </header>
+
+<!-- زر تشغيل/إيقاف الصوت (ثابت في أسفل اليسار) -->
+<button id="audioToggleBtn"
+  class="fixed bottom-5 left-5 bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-full shadow-lg z-50 transition">
+  🔊 تشغيل الصوت
+</button>
+
+<!-- ملف الموسيقى -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="FDownload.app-596128269058406-(320kbps).mp3" type="audio/mpeg" />
+  متصفحك لا يدعم تشغيل الصوت.
+</audio>
 
 <!-- ================= HERO ================= -->
 <section class="bg-green-800 text-white text-center py-28 px-6">
@@ -47,23 +58,19 @@
   </h3>
 </section>
 
-<!-- ================= STATS ================= -->
-<section id="stats" class="py-10 max-w-7xl mx-auto px-6">
-  <h3 class="text-3xl font-bold mb-6 text-center">حاليا </h3>
+<h3 class="text-3xl font-bold mb-12 text-center">📊 الوضعية الحالية</h3>
 
+<div class="grid md:grid-cols-4 gap-8 text-center">
 
-  <div class="grid md:grid-cols-4 gap-8 text-center">
-
-    <!-- عدد المتبرعين في الوسط -->
-    <div class="md:col-span-4 flex justify-center">
-      <div class="bg-white p-6 rounded-2xl shadow w-full md:w-1/4">
-        <p class="text-4xl font-extrabold text-green-700">0</p>
-        <p class="font-semibold"> متبرعين</p>
-      </div>
+  <!-- عدد المتبرعين في الوسط -->
+  <div class="md:col-span-4 flex justify-center">
+    <div class="bg-white p-6 rounded-2xl shadow w-full md:w-1/4">
+      <p class="text-4xl font-extrabold text-green-700">0</p>
+      <p class="font-semibold">عدد المتبرعين</p>
     </div>
-
   </div>
-</section>
+
+</div>
 
 <!-- ================= MATERIALS ================= -->
 <section id="materials" class="py-16 max-w-7xl mx-auto px-6">
@@ -76,36 +83,35 @@
       <p class="text-green-700 font-semibold">0 كغ</p>
       <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في الكسكسي</p>
     </div>
-<div class="bg-white p-6 rounded-xl shadow text-center">
+
+    <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">مقرونة</h4>
       <p class="text-green-700 font-semibold">0 كغ</p>
       <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في المقرونة</p>
     </div>
+
     <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">حليب</h4>
       <p class="text-green-700 font-semibold">0 ل</p>
       <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في الحليب</p>
     </div>
+
     <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">زيت</h4>
       <p class="text-green-700 font-semibold">0 لتر</p>
-     <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في الزيت</p>
-
+      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في الزيت</p>
     </div>
 
     <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">سكر</h4>
       <p class="text-green-700 font-semibold">0 كغ</p>
       <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في السكر</p>
-
     </div>
-
 
     <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">معلبات</h4>
       <p class="text-green-700 font-semibold">0 وحدة</p>
       <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في المعلبات</p>
-
     </div>
 
   </div>
@@ -114,6 +120,7 @@
     يمكنك المساهمة بما يتيسر لك من المواد السابقة.
   </p>
 </section>
+
 <section id="donations" class="py-16 max-w-4xl mx-auto px-6 bg-green-50 rounded-xl shadow-md mb-16">
   <h3 class="text-3xl font-bold mb-6 text-center text-green-800">💵 كم عندنا من تبرعات مالية؟</h3>
 
@@ -122,7 +129,7 @@
   </div>
 
   <p class="mt-6 text-center text-green-800 text-lg">
-    يمكنكم التواصل معانا وتسلم وصل اثناء تبرعكم </br>
+    يمكنكم التواصل معانا وتسلم وصل اثناء تبرعكم <br />
     شكرًا لكل من ساهم في دعم الحملة. تبرعاتكم هي سبب نجاحنا واستمرارنا في العطاء.
   </p>
 </section>
@@ -143,14 +150,14 @@
     <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition cursor-default">
       <div class="text-4xl mb-4 text-center text-green-600">💰</div>
       <h4 class="font-semibold text-center  text-xl mb-2">التبرع المالي</h4>
-      <p class="text-center">يمكنك التبرع ماليًا عبر تطبيق <strong>D17</strong>  على الرقم 28893766  بعد التنسيق معنا.</p>
+      <p class="text-center">يمكنك التبرع ماليًا عبر تطبيق <strong>D17</strong>  على الرقم 28893766  بعد التنسيق معنا لاستلام وصل التبرع.</p>
     </div>
 
     <!-- كرت نشر الوعي -->
     <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition cursor-default">
       <div class="text-4xl mb-4 text-center text-green-600">📣</div>
       <h4 class="font-semibold text-center text-xl mb-2">مشاركة الحملة</h4>
-      <p class="text-center">شارك الحملة مع أصدقائك وعائلتك لزيادة الوعي والمشاركة.<br>فالدال على الخير كفاعله</p>
+      <p class="text-center">شارك الحملة مع أصدقائك وعائلتك لزيادة الوعي والمشاركة.<br />فالدال على الخير كفاعله</p>
     </div>
   </div>
 
@@ -160,8 +167,8 @@
   </div>
 </section>
 
-<!-- ================= boycott ================= -->
-<section id="boycott" class="py-10 max-w-7xl mx-auto px-6">
+<!-- ================= STATS ================= -->
+<section id="stats" class="py-10 max-w-7xl mx-auto px-6">
   <div class="max-w-md mx-auto mb-10 p-4 bg-red-100 border border-red-400 rounded-lg text-center">
     <p class="text-red-700 font-bold text-lg mb-4">
       نرجو منكم بلطف تجنب جلب المواد المقاطعة.
@@ -182,12 +189,12 @@
         <li>sicam </li>
         <li>nestle </li>
         <li>ماء ميليتي </li>
-         <li>ماء صابرين </li>
-
+        <li>ماء صابرين </li>
       </ul>
     </div>
   </div>
 </section>
+
 <!-- ================= PALESTINE ================= -->
 <section id="palestine" class="bg-red-900 text-white py-12 px-6 max-w-7xl mx-auto rounded-xl shadow-lg my-16">
   <h3 class="text-4xl font-bold mb-6 text-center">لا تنسى القضية الفلسطينية</h3>
@@ -225,7 +232,7 @@
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="bg-green-700 text-white py-20">
   <div class="max-w-7xl mx-auto px-6 text-center">
-    <h3 class="text-3xl font-bold mb-6">📞 تواصل معنا</h3>
+    <h3 class="text-3xl font-bold mb-6">📞 للتواصل معنا</h3>
     <p class="text-xl mb-2">الهاتف / واتساب: <strong>28893766</strong></p>
     <p class="text-xl mb-4">فيسبوك: <strong>UGTE ISIMM</strong></p>
     <p class="text-lg">يمكنكم التبرع عبر تطبيق D17 بعد التواصل معنا</p>
@@ -239,6 +246,23 @@
 
 <!-- ================= SCRIPTS ================= -->
 <script>
+  // صوت الخلفية
+  const music = document.getElementById("bgMusic");
+  const btn = document.getElementById("audioToggleBtn");
+  music.volume = 0.35;
+
+  btn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play().catch(() => {});
+      btn.innerText = "🔇 إيقاف الصوت";
+      btn.classList.replace("bg-green-700", "bg-gray-600");
+    } else {
+      music.pause();
+      btn.innerText = "🔊 تشغيل الصوت";
+      btn.classList.replace("bg-gray-600", "bg-green-700");
+    }
+  });
+
   // اقتباسات متغيرة
   const quotes = [
     "«وتعاونوا على البر والتقوى»",
@@ -295,3 +319,5 @@
 
 </body>
 </html>
+
+

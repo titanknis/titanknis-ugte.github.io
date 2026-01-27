@@ -316,8 +316,20 @@
     }
   });
 </script>
+<script>
+  // عداد زيارات خاص بجهازك (localStorage)
+  let visits = localStorage.getItem("site_visits");
+  if (!visits) {
+    visits = 1;
+  } else {
+    visits = parseInt(visits) + 1;
+  }
+  localStorage.setItem("site_visits", visits);
+
+  // اطبع عدد الزيارات في Console فقط (لك أنت فقط)
+  console.log("عدد زياراتك لهذا الموقع من هذا المتصفح: " + visits);
+</script>
 
 </body>
 </html>
-
 
